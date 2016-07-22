@@ -1,0 +1,25 @@
+{
+  "name": "react-pure-css",
+  "version": "1.0.0",
+  "description": "React Pure.CSS components",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/guzmonne/react-pure-css.git"
+  },
+  "keywords": [
+    "React",
+    "Pure.CSS",
+    "CSS",
+    "Components"
+  ],
+  "author": "Guzman Monne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzmonne/react-pure-css/issues"
+  },
+  "homepage": "https://github.com/guzmonne/react-pure-css#readme"
+}
