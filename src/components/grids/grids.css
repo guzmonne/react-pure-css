@@ -1,0 +1,8 @@
+@import '~purecss/build/base.css';
+@import '~purecss/build/grids.css';
+@import '~purecss/build/grids-responsive.css';
+
+.l-box {
+  padding: 1em
+}
+

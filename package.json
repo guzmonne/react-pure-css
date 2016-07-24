@@ -1,59 +1,55 @@
 {
-  "name": "react-pure-css",
+  "name": "react-pure.css",
   "version": "1.0.0",
-  "description": "React Pure.CSS components",
+  "description": "React Pure.CSS",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "validate": "npm-run-all --parallel validate-webpack:*",
-    "validate-webpack:dev": "./node_modules/.bin/webpack-validator webpack.config.js --env.dev",
-    "validate-webpack:prod": "./node_modules/.bin/webpack-validator webpack.config.js --env.prod",
-    "clean-dist": "rimraf dist",
-    "copy-files": "cpy src/favicon.ico dist",
-    "clean-and-copy": "npm-run-all --serial clean-dist copy-files",
-    "prestart": "npm run clean-and-copy",
-    "start": "./node_modules/.bin/webpack-dev-server --env.dev --content-base dist",
-    "prebuild": "npm run clean-and-copy",
-    "prebuild:prod": "npm run clean-and-copy",
-    "build": "./node_modules/.bin/webpack --env.dev",
-    "build:prod": "./node_modules/.bin/webpack --env.prod"
+    "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
+    "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
+    "start": "hjs-dev-server",
+    "lint": "./node_modules/.bin/eslint src",
+    "build": "webpack",
+    "build:prod": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/guzmonne/react-pure-css.git"
+    "url": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/conatel-mcp-dashboard"
   },
   "keywords": [
-    "React",
-    "Pure.CSS",
-    "CSS",
-    "Components"
+    "React"
   ],
   "author": "Guzman Monne",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/guzmonne/react-pure-css/issues"
-  },
-  "homepage": "https://github.com/guzmonne/react-pure-css#readme",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel": "^6.5.2",
-    "babel-core": "^6.11.4",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015-webpack": "^6.4.2",
+    "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-2": "^6.11.0",
-    "cpy-cli": "^1.0.1",
     "css-loader": "^0.23.1",
-    "exports-loader": "^0.6.3",
-    "html-webpack-plugin": "^2.22.0",
-    "imports-loader": "^0.6.5",
+    "eslint": "^3.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "hjs-webpack": "^8.3.0",
+    "json-loader": "^0.5.4",
     "npm-run-all": "^2.3.0",
-    "opt-cli": "^1.5.1",
-    "rimraf": "^2.5.4",
-    "webpack": "^2.1.0-beta.20",
-    "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-validator": "^2.2.3"
+    "postcss-loader": "^0.9.1",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
+    "transform-loader": "^0.2.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-validator": "^2.2.2"
   },
   "dependencies": {
+    "purecss": "^0.6.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
   }

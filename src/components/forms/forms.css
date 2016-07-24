@@ -1,0 +1,10 @@
+@import '~purecss/build/base.css';
+@import '~purecss/build/forms.css';
+
+form.pure-form.pure-form-inline input {
+	margin-right: 5px;
+}
+
+form.pure-form.pure-form-inline label {
+	margin-right: 5px;
+}
