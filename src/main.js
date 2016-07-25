@@ -4,6 +4,18 @@ import {Grid, Unit} from 'components/grids/'
 import {InlineForm, AlignedForm, StackedForm} from 'components/forms/'
 import {Button} from 'components/buttons/'
 import {Table} from 'components/tables/'
+import {Menu, HorizontalMenu} from 'components/menus/'
+
+const menuItems = [
+	{label: 'Flickr'},
+	{label: 'Messenger'},
+	{label: 'Sports'},
+	{label: 'Finance'},
+	{label: 'More Sites', heading: true},
+	{label: 'Games'},
+	{label: 'News'},
+	{label: 'OMG!'}
+]
 
 const thead = (
 <thead>
@@ -182,6 +194,15 @@ class MainApp extends React.Component {
 						{thead}
 						{tbody}
 					</Table>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Menu heading="Yahoo Sites" items={menuItems}></Menu>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Menu width="100%" heading="Yahoo Sites" items={menuItems} />
+				</Unit>
+				<Unit pad sm="1">
+					<HorizontalMenu heading="Brand" items={menuItems} />
 				</Unit>
 			</Grid>
 		)

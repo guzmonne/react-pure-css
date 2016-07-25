@@ -1,11 +1,11 @@
 {
   "entry": [
-    "F:\\Projects\\react-pure-css\\node_modules\\webpack-hot-middleware\\client",
-    "F:\\Projects\\react-pure-css\\src\\app.js"
+    "/home/gmonne/Projects/react-pure-css/node_modules/webpack-hot-middleware/client",
+    "/home/gmonne/Projects/react-pure-css/src/app.js"
   ],
   "output": {
     "hash": true,
-    "path": "F:\\Projects\\react-pure-css\\dist/",
+    "path": "/home/gmonne/Projects/react-pure-css/dist/",
     "filename": "app.js",
     "cssFilename": "app.css",
     "publicPath": "/"
@@ -18,8 +18,8 @@
       ".json"
     ],
     "root": [
-      "F:\\Projects\\react-pure-css\\node_modules",
-      "F:\\Projects\\react-pure-css\\src"
+      "/home/gmonne/Projects/react-pure-css/node_modules",
+      "/home/gmonne/Projects/react-pure-css/src"
     ]
   },
   "plugins": [
@@ -148,7 +148,7 @@
     "publicPath": "/",
     "historyApiFallback": true,
     "hot": true,
-    "contentBase": "F:\\Projects\\react-pure-css\\dist",
+    "contentBase": "/home/gmonne/Projects/react-pure-css/dist",
     "port": 3000,
     "https": false,
     "hostname": "localhost"

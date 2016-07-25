@@ -1,0 +1,7 @@
+@import '~purecss/build/base.css';
+@import '~purecss/build/menus.css';
+
+.custom-restricted-width {
+  /* To limit the menu width to the content of the menu: */
+  display: inline-block;
+}
