@@ -1,10 +1,12 @@
 import React, {PropTypes as T} from 'react'
 import classnames from 'classnames'
 
-const Item = ({heading, className, href, onClick, label, children}) => {
+const Item = ({selected, disabled, heading, className, href, onClick, label, children}) => {
 	const classNames = classnames(className, {
 		'pure-menu-item': !heading,
-		'pure-menu-heading': !!heading
+		'pure-menu-heading': !!heading,
+		'pure-menu-selected': !heading && !!selected && !disabled,
+		'pure-menu-disabled': !heading && !selected && !!disabled, 
 	})
 	const pureMenuItemContent = !!label ? label : children
 	const pureMenuItem = !!heading ?
@@ -31,6 +33,8 @@ Item.propTypes = {
 	href: T.string,
 	onClick: T.func,
 	label: T.string,
+	selected: T.bool,
+	disabled: T.bool,
 }
 Item.defaultProps = {
 	heading: false,

@@ -6,6 +6,12 @@ import {Button} from 'components/buttons/'
 import {Table} from 'components/tables/'
 import {Menu, HorizontalMenu} from 'components/menus/'
 
+const horizontalMenuItems = [
+	{label: 'Selected', selected: true},
+	{label: 'Disabled', disabled: true},
+	{label: 'Normal'}
+]
+
 const menuItems = [
 	{label: 'Flickr'},
 	{label: 'Messenger'},
@@ -203,6 +209,9 @@ class MainApp extends React.Component {
 				</Unit>
 				<Unit pad sm="1">
 					<HorizontalMenu heading="Brand" items={menuItems} />
+				</Unit>
+				<Unit pad sm="1-2">
+					<HorizontalMenu items={horizontalMenuItems} />
 				</Unit>
 			</Grid>
 		)
