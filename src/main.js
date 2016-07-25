@@ -2,7 +2,79 @@ import React, {PropTypes as T} from 'react'
 import MainHeader from './common/main/header.js'
 import {Grid, Unit} from 'components/grids/'
 import {InlineForm, AlignedForm, StackedForm} from 'components/forms/'
-import {Button, Anchor} from 'components/buttons/'
+import {Button} from 'components/buttons/'
+import {Table} from 'components/tables/'
+
+const thead = (
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Make</th>
+		<th>Model</th>
+		<th>Year</th>
+		</tr>
+</thead>
+)
+
+const tbody = (
+	<tbody>
+	<tr>
+    <td>1</td>
+    <td>Honda</td>
+    <td>Accord</td>
+    <td>2009</td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Toyota</td>
+    <td>Camry</td>
+    <td>2012</td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>Hyundai</td>
+    <td>Elantra</td>
+    <td>2010</td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>Ford</td>
+    <td>Focus</td>
+    <td>2008</td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>Nissan</td>
+    <td>Sentra</td>
+    <td>2011</td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>BMW</td>
+    <td>M3</td>
+    <td>2009</td>
+  </tr>
+
+  <tr>
+      <td>7</td>
+      <td>Honda</td>
+      <td>Civic</td>
+      <td>2010</td>
+  </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Kia</td>
+            <td>Soul</td>
+            <td>2010</td>
+        </tr>
+	</tbody>
+)
 
 const form = (
 	<fieldset>
@@ -15,8 +87,7 @@ const form = (
 	      <input id="remember" type="checkbox" /> Remember me
 	  </label>
 
-	  <Button>A Pure Button</Button>
-	  <Anchor>A Pure Anchor</Anchor>
+	  <Button>Submit</Button>
 	</fieldset>
 )
 
@@ -64,7 +135,15 @@ class MainApp extends React.Component {
 					<InlineForm>{form}</InlineForm>
 				</Unit>
 				<Unit pad sm="1-2">
-					Unit 1-3
+					<Button success>Success</Button>
+					<Button error>Error</Button>
+					<Button warning>Warning</Button>
+					<Button secondary>Warning</Button>
+					<Button>Default</Button>
+					<Button xsmall>xsmall</Button>
+					<Button small>small</Button>
+					<Button large>large</Button>
+					<Button xlarge>xlarge</Button>
 				</Unit>
 				<Unit pad sm="1-2">
 					Unit 1-3
@@ -73,6 +152,36 @@ class MainApp extends React.Component {
 				<Unit pad sm="1-2">
 					Unit 1-3
 					<AlignedForm>{alignedForm}</AlignedForm>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Table>
+						{thead}
+						{tbody}
+					</Table>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Table striped>
+						{thead}
+						{tbody}
+					</Table>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Table bordered>
+						{thead}
+						{tbody}
+					</Table>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Table horizontal>
+						{thead}
+						{tbody}
+					</Table>
+				</Unit>
+				<Unit pad sm="1-2">
+					<Table striped horizontal>
+						{thead}
+						{tbody}
+					</Table>
 				</Unit>
 			</Grid>
 		)
