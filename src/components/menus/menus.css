@@ -5,3 +5,27 @@
   /* To limit the menu width to the content of the menu: */
   display: inline-block;
 }
+
+.pure-menu-disabled {
+	padding: 0;
+}
+
+.pure-menu-item {
+	cursor: pointer;
+	background-color: whitesmoke;
+}
+
+.pure-menu-link {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.pure-menu-has-children ul.pure-menu-children {
+	width: 100%;
+}
+
+.pure-menu-horizontal ul.pure-menu-children ul.pure-menu-children {
+  color: green;
+  margin-left: 100%;
+  margin-top: -34px;
+}

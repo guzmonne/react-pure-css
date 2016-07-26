@@ -9,7 +9,18 @@ import {Menu, HorizontalMenu} from 'components/menus/'
 const horizontalMenuItems = [
 	{label: 'Selected', selected: true},
 	{label: 'Disabled', disabled: true},
-	{label: 'Normal'}
+	{label: 'Normal', items: [
+		{label: 'One'},
+		{label: 'Two', items: [
+			{label: 'Two-One'}, 
+			{label: 'Two-Two', items: [
+				{label: 'Two-Two-One'},
+				{label: 'Two-Two-Two'},
+				{label: 'Two-Two-Three'},
+			]}
+		]},
+		{label: 'Three'},
+	]}
 ]
 
 const menuItems = [
@@ -210,8 +221,17 @@ class MainApp extends React.Component {
 				<Unit pad sm="1">
 					<HorizontalMenu heading="Brand" items={menuItems} />
 				</Unit>
+				<Unit pad sm="1">
+					<HorizontalMenu heading="Brand" items={horizontalMenuItems} />
+				</Unit>
 				<Unit pad sm="1-2">
 					<HorizontalMenu items={horizontalMenuItems} />
+				</Unit>
+				<Unit pad sm="1-2">
+					<Menu heading="Yahoo Sites" items={horizontalMenuItems}></Menu>
+				</Unit>
+				<Unit pad sm="1">
+					<div style={{display: 'block', height: '100px'}}></div>
 				</Unit>
 			</Grid>
 		)
