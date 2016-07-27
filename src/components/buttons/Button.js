@@ -15,7 +15,8 @@ const Button = ({
 	large,
 	xlarge,
 	className,
-	children
+	children,
+	onClick,
 }) => {
 	const classNames = classnames('pure-button', className, {
 		'pure-button-disabled': !!disabled,
@@ -32,9 +33,9 @@ const Button = ({
 	})
 
 	if (!!href)
-		return <a href={href} className={classNames}>{children}</a>
+		return <a href={href} className={classNames} onClick={onClick}>{children}</a>
 	else
-		return <button className={classNames}>{children}</button>
+		return <button className={classNames} onClick={onClick}>{children}</button>
 }
 	
 Button.propTypes = {
@@ -51,6 +52,7 @@ Button.propTypes = {
 	xlarge: T.bool,
 	className: T.string,
 	href: T.string,
+	onClick: T.func,
 }
 Button.defaultProps = {
 	disabled: false,
@@ -64,6 +66,7 @@ Button.defaultProps = {
 	small: false,
 	large: false,
 	xlarge: false,
+	onClick: ()=>{},
 }
 
 export default Button
