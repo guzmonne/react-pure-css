@@ -1,7 +1,7 @@
-require('components/forms/forms.css')
+require('./forms.css')
 
 import React from 'react'
-import DefaultForm from 'components/forms/DefaultForm.js'
+import DefaultForm from './DefaultForm.js'
 
 const customForm = className => ({children}) =>
 	<DefaultForm className={className}>

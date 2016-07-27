@@ -1,4 +1,4 @@
-require('components/grids/grids.css')
+require('./grids.css')
 
 import React from 'react'
 import Grid from './Grid.js'
