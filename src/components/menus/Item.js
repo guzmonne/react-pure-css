@@ -20,6 +20,8 @@ class Item extends React.Component {
 			heading,
 			className,
 			items,
+			divided,
+			dividedHorizontal
 		} = this.props
 		return classnames(className, {
 			'pure-menu-item': !heading,
@@ -28,6 +30,8 @@ class Item extends React.Component {
 			'pure-menu-disabled': !heading && !selected && !!disabled,
 			'pure-menu-has-children': !!items,
 			'pure-menu-allow-hover': !!items,
+			'pure-menu-item-divided': !!divided,
+			'pure-menu-item-divided-horizontal': !!dividedHorizontal,
 		})
 	}
 
@@ -89,6 +93,8 @@ Item.propTypes = {
 	selected: T.bool,
 	disabled: T.bool,
 	items: T.array,
+	divided: T.bool,
+	dividedHorizontal: T.bool,
 }
 Item.defaultProps = {
 	heading: false,

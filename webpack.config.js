@@ -5,7 +5,7 @@ var fs = require('fs')
 var config = getConfig({
 	in: 'src/app.js',
 	out: 'dist',
-	clearBeforeBuild: '!(images|favicon.ico)',
+	clearBeforeBuild: '!(images|css|favicon.ico)',
 	isDev: process.env.NODE_ENV !== 'production',
 	output: {
 		hash: true
@@ -13,7 +13,9 @@ var config = getConfig({
 	urlLoaderLimit: 10000,
 	html: function(context){
 		return {
-			'index.html': context.defaultTemplate(),
+			'index.html': context.defaultTemplate({
+				head: '<link rel="stylesheet" href="css/custom.css">'
+			}),
 		}
 	}
 })

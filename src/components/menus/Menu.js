@@ -3,13 +3,17 @@ import classnames from 'classnames'
 import MenuHeading from './MenuHeading.js'
 import Item from './Item.js'
 
-const Menu = ({width, className, heading, items, children}) => {
+const Menu = ({width, className, heading, horizontal, items, scrollable, children}) => {
 	const styles = {}
 	const headingComponent = !!heading ? <MenuHeading heading={heading} /> : null
 	const classNames = classnames('pure-menu', className, {
 		'custom-restricted-width': !width,
+		'pure-menu-scrollable': !!scrollable,
+		'pure-menu-horizontal': !!horizontal,
+		'custom-restricted': !!scrollable && !horizontal,
 	})
-	if (width === true) styles.width = '100 px' // custom width
+	if (!!width)
+	 styles.width = width === true ? '100 px' : width
 	return (
 		<div className={classNames} style={styles}>
 			{headingComponent}
@@ -25,6 +29,8 @@ Menu.propTypes = {
 	className: T.string,
 	items: T.array,
 	heading: T.string,
+	scrollable: T.bool,
+	horizontal: T.bool,
 }
 
 Menu.defaultProps = {
