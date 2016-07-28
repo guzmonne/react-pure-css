@@ -26,9 +26,11 @@ const scrollableMenu = [
 
 const horizontalMenuItems = [
 	{label: 'Selected', selected: true},
+	{divider: true},
 	{label: 'Disabled', disabled: true},
 	{label: 'Normal', items: [
 		{label: 'One'},
+		{divider: true},
 		{label: 'Two', items: [
 			{label: 'Two-One'}, 
 			{label: 'Two-Two', items: [

@@ -43,3 +43,20 @@
   margin-left: 100%;
   margin-top: -34px;
 }
+
+.pure-menu-divider {
+  height: 1px;
+  margin: 0 9px 0 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.pure-menu-horizontal .pure-menu-divider {
+  border-left: #e5e5e5 solid 1px;
+  margin: 0;
+  height: 41px;
+}
+
+.pure-menu-divider:after {
+  content: " ";
+}

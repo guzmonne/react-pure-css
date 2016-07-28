@@ -29,7 +29,7 @@
         "serveCustomHtmlInDev": true,
         "package": {
           "name": "react-pure.css",
-          "version": "1.0.0",
+          "version": "0.1.4",
           "description": "React Pure.CSS",
           "main": "src/app.js",
           "scripts": {
@@ -42,10 +42,7 @@
             "build": "webpack",
             "build:prod": "NODE_ENV=production webpack"
           },
-          "repository": {
-            "type": "git",
-            "url": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/conatel-mcp-dashboard"
-          },
+          "repository": "git@github.com:guzmonne/react-pure-css.git",
           "keywords": [
             "React"
           ],

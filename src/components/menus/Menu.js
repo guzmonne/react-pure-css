@@ -19,7 +19,7 @@ const Menu = ({width, className, heading, horizontal, items, scrollable, childre
 			{headingComponent}
 			<ul className="pure-menu-list">
 				{!!items ? items.map((item, i) => {
-					if (!!item.divider) return <div className="pure-menu-item-divider"></div>
+					if (!!item.divider) return <li className="pure-menu-item pure-menu-divider"></li>
 					else return <Item key={i} {...item}/>
 				}) : children}
 			</ul>
