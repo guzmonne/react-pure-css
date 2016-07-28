@@ -34,7 +34,7 @@ const getPureMenuItem = (props) => {
 const buildPureMenuItems = ({items}) =>
 	<ul className="pure-menu-children">
 		{items.map((item, i) => {
-			if (!!item.divider) return <li className="pure-menu-item pure-menu-divider"></li>
+			if (!!item.divider) return <li key={i} className="pure-menu-item pure-menu-divider"></li>
 			else return <Item key={i} {...item}/>
 		})}
 	</ul>
