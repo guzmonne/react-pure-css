@@ -18,7 +18,10 @@ const Menu = ({width, className, heading, horizontal, items, scrollable, childre
 		<div className={classNames} style={styles}>
 			{headingComponent}
 			<ul className="pure-menu-list">
-				{!!items ? items.map((item, i) => <Item key={i} {...item}/>) : children}
+				{!!items ? items.map((item, i) => {
+					if (!!item.divider) return <div className="pure-menu-item-divider"></div>
+					else return <Item key={i} {...item}/>
+				}) : children}
 			</ul>
 		</div>
 	) 
