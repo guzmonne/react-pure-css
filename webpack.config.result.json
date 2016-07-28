@@ -29,7 +29,7 @@
         "serveCustomHtmlInDev": true,
         "package": {
           "name": "react-pure.css",
-          "version": "0.1.4",
+          "version": "0.1.5",
           "description": "React Pure.CSS",
           "main": "src/app.js",
           "scripts": {
